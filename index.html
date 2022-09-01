@@ -6,25 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
-  <body>
-    <div class="grid-numbers">
+  <body style="background:black">
+    <table class="calculator" >
+      <tr>
 
-      <!-- <div class="grid-item">+</div>  
-      <div class="grid-item">-</div>  
-      <div class="grid-item">*</div>  
-      <div class="grid-item">/</div>  -->
+        <td colspan="3"> <input class="display-box" type="text" id="result" disabled /> </td>
 
-      <div class="grid-item grid-item-7">7</div>
-      <div class="grid-item grid-item-8">8</div>
-      <div class="grid-item grid-item-9">9</div>  
-      <div class="grid-item grid-item-4">4</div>
-      <div class="grid-item grid-item-5">5</div>
-      <div class="grid-item grid-item-6">6</div>  
-      <div class="grid-item grid-item-1">1</div>
-      <div class="grid-item grid-item-2">2</div>
-      <div class="grid-item grid-item-3">3</div>  
-      <div class="grid-item grid-item-0">0</div>  
-    </div>
+     
+        <!-- clearScreen() function clears all the values -->
+        <td> <input type="button" value="C"  id="clear" /> </td>
+      </tr>
+      <tr>
+        <!-- display() function displays the value of clicked button -->
+        <td> <input type="button" value="7"  /> </td>
+        <td> <input type="button" value="8"  /> </td>
+        <td> <input type="button" value="9"  /> </td>
+        <td> <input type="button" value="/"  /> </td>
+      </tr>
+      <tr>
+        <td> <input type="button" value="4"  /> </td>
+        <td> <input type="button" value="5"  /> </td>
+        <td> <input type="button" value="6"  /> </td>
+        <td> <input type="button" value="-"  /> </td>
+      </tr>
+      <tr>
+        <td> <input type="button" value="1"  /> </td>
+        <td> <input type="button" value="2"  /> </td>
+        <td> <input type="button" value="3"  /> </td>
+        <td> <input type="button" value="+"  /> </td>
+      </tr>
+      <tr>
+        <td> <input type="button" id="dot" value="."  /> </td>
+        <td> <input type="button" value="0"  /> </td>
+     
+        <!-- calculate() function evaluates the mathematical expression -->
+        <td> <input type="button" value="=" id="showResults"  /> </td>
+        <td> <input type="button" value="*"  /> </td>
+      </tr>
+    </table>
+     
     <script type="module" src="/main.js"></script>
   </body>
 </html>
