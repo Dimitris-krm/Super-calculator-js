@@ -13,9 +13,10 @@
     background-color: #dcdbe1;
     border: solid black 0.5px;
     color: black;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 100%;
-    height: 65%;
+    margin-left: 20px;
+    height: 95%;
 }
 #clear {
     background-color: #fb0066;
@@ -42,3 +43,91 @@ input:hover[type=button] {
   -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
   box-shadow: inset 0px 0px 5px #c1c1c1;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Jost', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  padding: 0.5rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+section {
+  width: 90%;
+  max-width: 40rem;
+  margin: auto;
+}
+
+.healthbar {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #575757;
+  margin: 1rem 0;
+  background: #fde5e5;
+}
+
+.healthbar__value {
+  background-color: #00a876;
+  width: 100%;
+  height: 100%;
+}
+
+.manabar__value {
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  text-align: center;
+  padding: 0.5rem;
+  margin: 1rem auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 12px;
+}
+
+.container-calc {
+  text-align: center;
+  padding: 0.5rem;
+  margin: 1rem auto;
+
+  border-radius: 12px;
+}
+
+
+#monster h2,
+#player h2 {
+  margin: 0.25rem;
+}
+
+#controls {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#log ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#log li {
+  margin: 0.5rem 0;
+}
+
