@@ -2,10 +2,18 @@ import './style.css'
 import $ from "jquery"
 
 var firstValue = ""
-var secondValue = ""
-var isCalc = false
-var symbol = ""
-var isDot = false
+var secondValue = "";
+var historyArray =[];
+var historyValues =[];
+var isCalc = false;
+var symbol = "";
+var isSymbol = false;
+var isDot = false;
+
+// TODO:
+// User able to change calcArray action
+// Implement new button actions
+// 
 
 const numberArray = ["0","1","2","3","4","5","6","7","8","9"]
 const calcArray = ["*","/","+","-"]
@@ -67,16 +75,15 @@ buttons.forEach(button =>{
 function getData(input){
   
   symbol = input
-  if (!isCalc){
+
     isCalc = true
     isDot = false
     result.value = firstValue + " " + `${symbol} ${secondValue}`
   
-    }
+
   console.log(typeof input)
 }
 $("#showResults").on("click",()=>{
-  console.log("s")
   console.log(symbol)
   var finalRes;
   switch(symbol){
@@ -95,9 +102,34 @@ $("#showResults").on("click",()=>{
     default:
       finalRes = firstValue
   }
+  historyArray.push(`${firstValue} ${symbol} ${secondValue} = ${finalRes}`)
+  historyValues.push({
+    firstValue: firstValue,
+    symbol: symbol,
+    secondValue : secondValue,
+  })
+  $("#history").empty()     
+  var listSelector = $("#history")
+  $.each(historyArray, function(i, item) {
+      listSelector.append(`<li class="history-text">${item}<button id=${i} class="history-button">test${i}</button></li>`)
+  });
+  console.log(historyArray)
   result.value = finalRes
   isCalc = false
   isDot = false
   firstValue = ""
   secondValue = ""
+  setupButtons()
 })
+
+
+function setupButtons(){
+var historyButtons = document.querySelectorAll(".history-button")
+historyButtons.forEach(button =>{
+button.addEventListener("click",function(){
+
+  console.log(historyValues[this.id])
+  result.value = `${historyValues[this.id].firstValue} ${historyValues[this.id].symbol} ${historyValues[this.id].secondValue}`
+})
+})
+}

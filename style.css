@@ -71,26 +71,6 @@ section {
   margin: auto;
 }
 
-.healthbar {
-  width: 100%;
-  height: 40px;
-  border: 1px solid #575757;
-  margin: 1rem 0;
-  background: #fde5e5;
-}
-
-.healthbar__value {
-  background-color: #00a876;
-  width: 100%;
-  height: 100%;
-}
-
-.manabar__value {
-  background-color: blue;
-  width: 100%;
-  height: 100%;
-}
-
 .container {
   text-align: center;
   padding: 0.5rem;
@@ -131,3 +111,25 @@ section {
   margin: 0.5rem 0;
 }
 
+.history-text{
+  margin: 0.5rem 0;
+  border: #64278f;
+  color: red;
+ 
+}
+.history-button{
+  font-family: 'Orbitron', sans-serif;
+  background-color: #64278f;
+  color: white;
+  border: solid black 0.5px;
+  margin-left: 15px;
+  border-radius: 5px;
+  height: 70%;
+  outline: none;
+}
+.history-button:hover{
+  background: red;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+}
