@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Super Calculator</title>
   </head>
   <body>
 
@@ -18,7 +18,7 @@
     <table class="calculator" >
       <tr>
 
-        <td colspan="3"> <input class="display-box" type="text" id="result" disabled /> </td>
+        <td colspan="3"> <input class="display-box" type="text" id="displayResult" disabled /> </td>
 
      
         <!-- clearScreen() function clears all the values -->
@@ -26,10 +26,10 @@
       </tr>
       <tr>
         <!-- display() function displays the value of clicked button -->
-        <td> <input type="button" value="√"  /> </td>
-        <td> <input type="button" value="⟲"  /> </td>
-        <td> <input type="button" value="⌫"  /> </td>
-        <td> <input type="button" value="C"  id="clear" /> </td>
+        <td> <input type="button" id ="squareRoot" value="√"  /> </td>
+        <td> <input type="button" id="square" value="x²"  /> </td>
+        <td> <input type="button" id="deleteButton" value="⌫"  /> </td>
+        <td> <input type="button" id="clear" value="C"  /> </td>
       </tr>
       <tr>
         <!-- display() function displays the value of clicked button -->
